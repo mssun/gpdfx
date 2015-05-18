@@ -59,7 +59,7 @@ class Poprender(object):
         self.win.set_title(self.fn)
         self.win.connect("delete-event", gtk.main_quit)
 
-        adjust = gtk.Adjustment(1, 1, self.n_pages, 1, 5)
+        adjust = gtk.Adjustment(1, 1, self.n_pages, -1, 1)
         page_selector = gtk.SpinButton(adjust, 0, 0);
         page_selector.connect("value-changed", self.on_changed)
 
